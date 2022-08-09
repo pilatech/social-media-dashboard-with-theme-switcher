@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   
@@ -18,14 +21,16 @@
    <h1 class="dashboard__title">
     Social Media Dashboard
     <small class="dashboard__title-extra">
-     Total Followrs: 23,004
+     Total Followers: 23,004
     </small>
    </h1>
-   <label class="dashboard__toggle">
-    Dark Mode 
-    <input type="checkbox" name="nightMode" id="night-mode-toggle" class="dashboard__checker">
-    <span class="dashboard__toggle-circle"></span>
-   </label>
+   <div class="dashboard__toggle-group">
+    <p class="dashboard__toggle-label">Dark Mode</p>
+    <label class="dashboard__toggle"> 
+     <input type="checkbox" name="nightMode" id="night-mode-toggle" class="dashboard__checker">
+     <span class="dashboard__toggle-circle"></span>
+    </label>
+   </div>
   </header>
   <div class="dashboard__totals">
     <div class="card card--facebook">
@@ -89,7 +94,7 @@
     subscribers
    </small>
  </p>
- <p class="card__increment-stat">
+ <p class="card__increment-stat card__increment-stat--down">
   <img src="images/icon-down.svg" alt="decrease" class="card__increment-icon">
   144 Today
  </p>
@@ -101,7 +106,7 @@
      Overview - Today
     </h2>
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Page Views
       <strong class="panel__number">
        87
@@ -117,7 +122,7 @@
     </div>
     <!-- panel ends -->
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Likes
       <strong class="panel__number">
        52
@@ -125,7 +130,7 @@
      </p>
      <p class="panel__icons">
        <img src="images/icon-facebook.svg" alt="facebok" class="panel__icon">
-       <small class="panel__stat">
+       <small class="panel__stat panel__stat--down">
         <img src="images/icon-down.svg" alt="increment" class="panel__increment">
         2%
        </small>
@@ -133,7 +138,7 @@
     </div>
     <!-- panel ends -->
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Likes
       <strong class="panel__number">
        5462
@@ -149,7 +154,7 @@
     </div>
     <!-- panel ends -->
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Profile Views
       <strong class="panel__number">
        52k
@@ -165,7 +170,7 @@
     </div>
     <!-- panel ends -->
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Retweets
       <strong class="panel__number">
        117
@@ -181,7 +186,7 @@
     </div>
     <!-- panel ends -->
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Likes
       <strong class="panel__number">
        507
@@ -197,7 +202,7 @@
     </div>
     <!-- panel ends -->
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Likes
       <strong class="panel__number">
        107
@@ -205,7 +210,7 @@
      </p>
      <p class="panel__icons">
        <img src="images/icon-youtube.svg" alt="youtube" class="panel__icon">
-       <small class="panel__stat">
+       <small class="panel__stat panel__stat--down">
         <img src="images/icon-down.svg" alt="increment" class="panel__increment">
         19%
        </small>
@@ -213,7 +218,7 @@
     </div>
     <!-- panel ends -->
     <div class="panel">
-     <p class="panel__stat">
+     <p class="panel__info">
       Total Views
       <strong class="panel__number">
        1407
@@ -221,7 +226,7 @@
      </p>
      <p class="panel__icons">
        <img src="images/icon-youtube.svg" alt="youtube" class="panel__icon">
-       <small class="panel__stat">
+       <small class="panel__stat panel__stat--down">
         <img src="images/icon-down.svg" alt="increment" class="panel__increment">
         12%
        </small>

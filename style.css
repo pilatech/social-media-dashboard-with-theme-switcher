@@ -1,0 +1,380 @@
+*,
+*::before,
+*::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font: inherit;
+ transition: .3s;
+}
+
+:root {
+ font-size: 62.5%;
+
+ --color-success: hsl(163, 72%, 41%);
+ --color-danger: hsl(356, 69%, 56%);
+
+ /*social*/
+ --color-facebook: hsl(208, 92%, 53%);
+ --color-twitter: hsl(203, 89%, 53%);
+ --color-instagram-1: hsl(37, 97%, 70%);
+ --color-instagram-2: hsl(329, 70%, 58%);
+ --color-youtube: hsl(348, 97%, 39%);
+
+/*dark theme toggle*/
+--color-toggle-1: hsl(210, 78%, 56%);
+--color-toggle-2: hsl(146, 68%, 55%);
+
+/*light theme toggle*/
+--color-toggle: hsl(230, 22%, 74%);
+
+/*dark theme core*/
+--color-d-bg: hsl(230, 17%, 14%);
+--color-d-top-bg: hsl(232, 19%, 15%);
+--color-d-card-bg: hsl(228, 28%, 20%);
+--color-d-text: hsl(228, 34%, 66%);
+
+--color-white: hsl(0, 0%, 100%);
+
+/*light theme core*/
+--color-l-top-bg: hsl(225, 100%, 98%);
+--color-l-card-bg: hsl(227, 47%, 96%);
+--color-l-text: hsl(228, 12%, 44%);
+--color-l-text-darker: hsl(230, 17%, 14%);
+
+}
+
+body {
+ font-family: 'Inter', sans-serif;
+ position: relative;
+}
+
+.dark {
+ background: var(--color-d-bg)
+}
+
+body::before {
+ content: '';
+ display: block;
+ width: 100%;
+ height: 30rem;
+ position: absolute;
+ background: var(--color-l-top-bg);
+ z-index: -1;
+ top: -5rem;
+ border-radius: 0 0 5rem 5rem;
+}
+
+.dark::before {
+ background: var(--color-d-top-bg);
+}
+
+.dashboard {
+ max-width: 38rem;
+ width: 90%;
+ margin-inline: auto;
+ margin-top: 5rem;
+ color: var(--color-l-text)
+}
+
+.dark .dashboard {
+ color: var(--color-d-text);
+}
+
+.dashboard__title {
+  color: var(--color-l-text-darker);
+  font-size: 3rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-d-text);
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.dark .dashboard__title {
+ color: var(--color-white);
+ border-bottom-color: (--color-d-text);
+}
+
+.dashboard__title-extra {
+ color: var(--color-l-text);
+ display: block;
+ font-size: 1.8rem;
+ margin-top: .5rem;
+}
+
+.dark .dashboard__title-extra {
+ color: var(--color-d-text);
+}
+
+.dashboard__toggle-group {
+ display: flex;
+ width: 100%;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 3.5rem;
+}
+
+.dashboard__toggle-label {
+ font-weight: 700;
+ font-size: 1.8rem;
+}
+
+.dashboard__toggle {
+ background: var(--color-toggle);
+ height: 2.6rem;
+ width: 5rem;
+ border-radius: 50vmin;
+ position: relative;
+ cursor: pointer;
+}
+
+.dark .dashboard__toggle {
+ background: linear-gradient(90deg, var(--color-toggle-1), var(--color-toggle-2));
+}
+
+.dashboard__checker {
+ appearance: none;
+}
+
+.dashboard__checker:checked +
+.dashboard__toggle-circle {
+ transform: translateX(-2.3rem);
+}
+
+.dashboard__toggle-circle {
+ display: block;
+ width: 2rem;
+ height: 2rem;
+ background: var(--color-l-card-bg);
+ border-radius: 50%;
+ position: absolute;
+ right: 3px;
+ top: 3px;
+ transition: transform .2s;
+}
+
+.dark .dashboard__toggle-circle {
+ background: var(--color-d-card-bg);
+}
+
+.card {
+ background: var(--color-l-card-bg);
+ border-radius: .8rem;
+ margin-bottom: 3rem;
+ text-align: center;
+ padding: 3rem;
+ display: flex;
+ flex-direction: column;
+ gap: 2.5rem;
+ position: relative;
+ overflow: hidden;
+ transition: .2s;
+ cursor: pointer;
+}
+
+.card::before {
+ content: '';
+ display: block;
+ width: 110%;
+ height: 1rem;
+ position: absolute;
+ top: -5px;
+ left: -1rem;
+}
+
+.card--facebook::before {
+ background: var(--color-facebook);
+}
+
+.card--twitter::before {
+ background: var(--color-twitter);
+}
+
+.card--instagram::before {
+ background: linear-gradient(90deg, var(--color-instagram-1), var(--color-instagram-2))
+}
+
+.card--youtube::before {
+ background: var(--color-youtube)
+}
+
+.card__profile {
+ font-size: 1.4rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-weight: 700;
+ gap: 1rem;
+}
+
+.card__total {
+ font-weight: 700;
+ color: var(--color-l-text-darker);
+ font-size: 4.2rem;
+}
+
+.dark .card__total {
+ color: var(--color-white);
+}
+
+.card__total-extra {
+ display: block;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ color: var(--color-l-text);
+ font-weight: 400;
+ margin-top: 5px;
+ letter-spacing: 3px;
+}
+
+.dark .card__total-extra {
+ color: var(--color-d-text)
+}
+
+.card__increment-stat {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 3px;
+ font-size: 1.4rem;
+ font-weight: 700;
+}
+
+.card__increment-stat,
+.panel__stat {
+ color: var(--color-success);
+}
+
+.card__increment-stat--down,
+.panel__stat--down {
+ color: var(--color-danger);
+}
+
+.dashboard__overview {
+ margin-block: 6rem;
+}
+
+.dashboard__section-title {
+ font-size: 2.5rem;
+ font-weight: 700;
+ margin-bottom: 2.5rem;
+}
+
+.dark .dashboard__section-title {
+ color: var(--color-white);
+}
+
+.panel {
+ background: var(--color-l-card-bg);
+ border-radius: .8rem;
+ margin-bottom: 1.8rem;
+ padding: 3rem;
+ display: flex;
+ justify-content: space-between;
+ cursor: pointer;
+ transition: .2s;
+}
+
+.dark .panel,
+.dark .card {
+ background: var(--color-d-card-bg);
+}
+
+.card:hover,
+.panel:hover {
+ background: hsl(227, 47%, 90%);
+}
+
+.dark .card:hover,
+.dark .panel:hover {
+background: hsl(228, 28%, 25%);
+}
+
+.panel__info {
+ display: flex;
+ flex-direction: column;
+ font-size: 1.4rem;
+ font-weight: 700;
+ gap: 2.5rem;
+}
+
+.panel__number {
+ font-size: 3.2rem;
+ color: var(--color-l-text-darker);
+}
+
+.dark .panel__number {
+ color: var(--color-white);
+}
+
+.panel__icons {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: flex-end;
+}
+.panel__stat {
+ font-size: 1.3rem;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ gap: 2px;
+}
+
+@media(min-width: 1200px){
+
+.dashboard {
+ max-width: 120rem;
+}
+
+.dashboard__header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-bottom: 3rem;
+}
+
+.dashboard__title {
+  border: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  width: auto;
+}
+
+.dashboard__title-extra {
+ margin-top: .8rem;
+}
+
+.dashboard__toggle-group {
+ width: auto;
+ justify-content: flex-end;
+ align-items: center;
+ gap: 1rem;
+ margin: 0
+}
+
+.dashboard__totals {
+ display: flex;
+ gap: 3rem;
+}
+
+.card {
+ flex: 1;
+ margin: 0;
+}
+
+.dashboard__overview {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 3.5rem;
+}
+
+.dashboard__section-title {
+ margin: 0;
+ grid-column: 1 / -1;
+}
+
+.panel {
+ margin: 0;
+}
+}
