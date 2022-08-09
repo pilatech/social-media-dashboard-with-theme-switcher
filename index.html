@@ -13,70 +13,223 @@
 
 </head>
 <body>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
+ <main class="dashboard">
+  <header class="dashboard__header">
+   <h1 class="dashboard__title">
+    Social Media Dashboard
+    <small class="dashboard__title-extra">
+     Total Followrs: 23,004
+    </small>
+   </h1>
+   <label class="dashboard__toggle">
+    Dark Mode 
+    <input type="checkbox" name="nightMode" id="night-mode-toggle" class="dashboard__checker">
+    <span class="dashboard__toggle-circle"></span>
+   </label>
+  </header>
+  <div class="dashboard__totals">
+    <div class="card card--facebook">
+       <span class="card__profile">
+        <img src="images/icon-facebook.svg" alt="facebook" class="card__social-icon">
+        @nathanf
+       </span>
+       <p class="card__total">
+         1987
+         <small class="card__total-extra">
+          followers
+         </small>
+       </p>
+       <p class="card__increment-stat">
+        <img src="images/icon-up.svg" alt="increase" class="card__increment-icon">
+        12 Today
+       </p>
+    </div>
+  <div class="card card--twitter">
+   <span class="card__profile">
+    <img src="images/icon-twitter.svg" alt="twitter" class="card__social-icon">
+    @nathanf
+   </span>
+   <p class="card__total">
+     1044
+     <small class="card__total-extra">
+      followers
+     </small>
+   </p>
+   <p class="card__increment-stat">
+    <img src="images/icon-up.svg" alt="increase" class="card__increment-icon">
+    99 Today
+   </p>
+</div>
+<!-- card ends -->
+<div class="card card--instagram">
+ <span class="card__profile">
+  <img src="images/icon-instagram.svg" alt="instagram" class="card__social-icon">
   @realnathanf
-  11k
-  Followers
+ </span>
+ <p class="card__total">
+   11k
+   <small class="card__total-extra">
+    followers
+   </small>
+ </p>
+ <p class="card__increment-stat">
+  <img src="images/icon-up.svg" alt="increase" class="card__increment-icon">
   1099 Today
-
+ </p>
+</div>
+<!-- card ends -->
+<div class="card card--youtube">
+ <span class="card__profile">
+  <img src="images/icon-youtube.svg" alt="youtube" class="card__social-icon">
   Nathan F.
-  8239
-  Subscribers
+ </span>
+ <p class="card__total">
+   8239
+   <small class="card__total-extra">
+    subscribers
+   </small>
+ </p>
+ <p class="card__increment-stat">
+  <img src="images/icon-down.svg" alt="decrease" class="card__increment-icon">
   144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
+ </p>
+</div>
+<!-- card ends -->
+  </div>
+  <section class="dashboard__overview">
+    <h2 class="dashboard__section-title">
+     Overview - Today
+    </h2>
+    <div class="panel">
+     <p class="panel__stat">
+      Page Views
+      <strong class="panel__number">
+       87
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-facebook.svg" alt="facebok" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-up.svg" alt="increment" class="panel__increment">
+        303%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+    <div class="panel">
+     <p class="panel__stat">
+      Likes
+      <strong class="panel__number">
+       52
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-facebook.svg" alt="facebok" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-down.svg" alt="increment" class="panel__increment">
+        2%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+    <div class="panel">
+     <p class="panel__stat">
+      Likes
+      <strong class="panel__number">
+       5462
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-instagram.svg" alt="instagram" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-up.svg" alt="increment" class="panel__increment">
+        2257%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+    <div class="panel">
+     <p class="panel__stat">
+      Profile Views
+      <strong class="panel__number">
+       52k
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-instagram.svg" alt="instagram" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-up.svg" alt="increment" class="panel__increment">
+        1375%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+    <div class="panel">
+     <p class="panel__stat">
+      Retweets
+      <strong class="panel__number">
+       117
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-twitter.svg" alt="twitter" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-up.svg" alt="increment" class="panel__increment">
+        303%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+    <div class="panel">
+     <p class="panel__stat">
+      Likes
+      <strong class="panel__number">
+       507
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-twitter.svg" alt="twitter" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-up.svg" alt="increment" class="panel__increment">
+        553%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+    <div class="panel">
+     <p class="panel__stat">
+      Likes
+      <strong class="panel__number">
+       107
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-youtube.svg" alt="youtube" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-down.svg" alt="increment" class="panel__increment">
+        19%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+    <div class="panel">
+     <p class="panel__stat">
+      Total Views
+      <strong class="panel__number">
+       1407
+      </strong>
+     </p>
+     <p class="panel__icons">
+       <img src="images/icon-youtube.svg" alt="youtube" class="panel__icon">
+       <small class="panel__stat">
+        <img src="images/icon-down.svg" alt="increment" class="panel__increment">
+        12%
+       </small>
+     </p>
+    </div>
+    <!-- panel ends -->
+  </section>
+ </main>
   <script src="script.js"></script>
 </body>
 </html>
