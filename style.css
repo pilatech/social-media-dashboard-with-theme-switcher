@@ -133,6 +133,7 @@ body::before {
 }
 
 .dashboard__checker {
+ -webkit-appearance: none;
  appearance: none;
 }
 
